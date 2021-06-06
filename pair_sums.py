@@ -1,24 +1,13 @@
-"""
-
-
-"""
-
 import math
 
-
-# Add any extra import statements you may need here
-
-
-# Add any helper functions you may need here
-
-
 def numberOfWays(arr, k):
-    # Write your code here
-
-
-
-# These are the tests we use to determine if the solution is correct.
-# You can add your own at the bottom, but they are otherwise not editable!
+    out = 0
+    for i in range(0, len(arr)-1):
+        for j in range(i+1, len(arr)):
+            print(i,j)
+            if arr[i]+arr[j] == k:
+                out += 1
+    return out
 
 def printInteger(n):
     print('[', n, ']', sep='', end='')
